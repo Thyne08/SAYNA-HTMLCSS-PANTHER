@@ -7,150 +7,189 @@
 }
 @font-face {
   font-family: "Panthera";
-  src: url("./font/PantheraRegular-MVZ9J.ttf") format("truetype");
+  src: url("../font/PantheraRegular-MVZ9J.ttf") format("truetype");
 }
 @font-face {
   font-family: "Beyno";
-  src: url("./font/BEYNO.ttf") format("truetype");
+  src: url("../font/BEYNO.ttf") format("truetype");
 }
 @font-face {
   font-family: "Wakanda";
-  src: url("./font/wakandaforever-regular.ttf") format("truetype");
+  src: url("../font/wakandaforever-regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Cantarell";
-  src: url("./font/Cantarell-Regular.ttf") format("truetype");
+  src: url("../font/Cantarell-Regular.ttf") format("truetype");
 }
 body {
-  background: url("./Illustrations + Logo/All pages/arrière_plan.png");
+  background-image: url("../Images/arrière_plan.png");
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-color: radial-gradient(126.67% 350.28% at -21.35% 0%,
-  #11213F 0%, #0B0B0B 39.1%, rgba(2, 23, 64, 0.837641) 94.57%,
-  rgba(2, 23, 64, 0) 100%)
 }
 .navbar {
-  position: fixed;
-  padding: 20px 50px;
+  width: 90%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: "Beyno", sans-serif;
+}
+.navbar-img {
+  width: 60%;
+}
+
+.navlink {
+  width: 40%;
+}
+.lien1:link {
+  color: #fff;
+}
+.lien1:active {
+  color: #3d2da6;
+} /* Liens visités */
+.lien1:visited {
+  color: #3d2da6;
+} /* Liens visités */
+.lien2:link {
+  color: #fff;
+}
+.lien2:active {
+  color: #3d2da6;
+} /* Liens visités */
+.lien2:visited {
+  color: #3d2da6;
+} /* Liens visités */
+.lien3:link {
+  color: #fff;
+}
+.lien3:active {
+  color: #3d2da6;
+} /* Liens visités */
+.lien3:visited {
+  color: #3d2da6;
+} /* Liens visités */
+
+.navlink ul {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  align-items: center;
 }
-.nav-links {
-  display: flex;
-}
-.nav-links ul {
-  display: flex;
-}
-.nav-links li {
-  margin: 0 30px;
-}
-.nav-links a {
+.navlink ul li a {
   color: #fff;
   text-transform: uppercase;
 }
-.active a {
-  color: #3d2da6;
+.navlink ul li a:hover {
   text-decoration: underline;
 }
-.menu-hamburger {
-  width: 35px;
-  position: absolute;
-  top: 35px;
-  right: 35px;
-  display: none;
+@media screen and (max-width: 700px) {
+  .navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-family: "Beyno", sans-serif;
+  }
+  .navbar-img {
+    width: 20%;
+    height: 60px;
+    align-items: center;
+  }
+  .sayna-logo {
+    width: 30px;
+  }
+  .marvel-logo {
+    width: 40px;
+  }
+
+  .navlink {
+    width: 80%;
+    margin-left: 15%;
+  }
+  .navlink ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .navlink ul li a {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 450px) {
   .navbar {
-    padding: 0;
-  }
-  .nav-links {
-    position: absolute;
-    background-color: red;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
     display: flex;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(7px);
     align-items: center;
-    margin-left: -100%;
-    transition: all 0.5s ease;
+    font-family: "Beyno", sans-serif;
+    margin-right: 10px;
   }
-  .nav-links ul {
-    display: flex;
-    flex-direction: column;
+  .navbar-img {
+    width: 20%;
+    height: 60px;
     align-items: center;
   }
-  .nav-links ul li {
-    margin: 25px 0;
-    font-size: 1.2em;
+  .sayna-logo {
+    width: 30px;
   }
-  .menu-hamburger {
-    display: block;
+  .marvel-logo {
+    width: 40px;
   }
-  .logo-header {
-    position: absolute;
-    top: 35px;
-    left: 50px;
+
+  .navlink ul {
+    display: flex;
+    justify-content: space-between;
   }
-  .mobile-menu {
-    margin-left: 0;
+  .navlink ul li a {
+    text-transform: uppercase;
+    font-size: 16px;
   }
 }
-header {
-  height: 180vh;
-}
-.releve-defi-haut {
-  background: url("./Illustrations + Logo/Enigme/Pantherenigme1.png");
+
+.article-haut {
+  background: url("../Images/Pantherenigme1.png");
   background-repeat: no-repeat;
-  background-position: left;
-  height: 100vh;
+  background-position: top left;
+  background-size: 60%;
+  height: auto;
   padding: 150px;
 }
-.releve-defi-haut h1 {
+.article-content {
+  width: 100%;
+  height: 80vh;
+}
+.article-content h1 {
   font-family: "Beyno", sans-serif;
   font-size: 68px;
   color: #9e91b7;
-  width: 50%;
-  margin-left: 50%;
-  padding-top: 250px;
+  width: 70%;
+  margin-left: 40%;
+  margin-top: 50px;
   padding-left: 150px;
   text-align: justify;
 }
-.releve-defi-haut p {
+.article-content p {
   font-family: "Cantarell", sans-serif;
   color: #fff;
   width: 50%;
   padding: 10%;
   text-align: justify;
   margin-left: 50%;
-  background: url("./Illustrations + Logo/Enigme/Pantherenigme2.png");
+  background: url("../Images/Pantherenigme2.png");
   background-repeat: no-repeat;
   background-position: center;
 }
-.releve-defi-bas {
-  margin: 150px;
+.article-content1 {
+  height: 70vh;
 }
-.releve-defi-bas h2 {
+.article-content1 h2 {
   font-family: "Wakanda", sans-serif;
   color: #9e91b7;
   font-size: 32px;
   margin-bottom: 50px;
 }
 
-.releve-defi-bas h2 {
-  font-family: "Wakanda", sans-serif;
-  font-size: 32px;
-  color: #9e91b7;
-}
 .transcription {
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   display: flex;
 }
 .transcription-left {
@@ -158,6 +197,7 @@ header {
 }
 .transcription-intro {
   margin-bottom: 20px;
+  font-family: "Cantarell", sans-serif;
 }
 .transcription-code {
   text-transform: uppercase;
@@ -167,12 +207,13 @@ header {
 .transcription-right {
   font-family: "Cantarell", sans-serif;
   color: #fff;
-  width: 70%;
+  width: 55%;
   padding: 10%;
   text-align: center;
-  background: url("./Illustrations + Logo/Enigme/Pantherenigme2.png");
+  background: url("../Images/Pantherenigme2.png");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 80%;
 }
 .savais-tu {
   width: 100%;
@@ -181,107 +222,748 @@ header {
   text-align: center;
 }
 .savais-tu p {
-  width: 80%;
-  margin: 15px auto;
+  width: 100%;
+  margin: auto;
+  background: url("../Images/Pantherenigme2.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .code {
   font-family: "Wakanda", sans-serif;
   text-transform: uppercase;
-  font-size: 20px ;
+  font-size: 20px;
 }
 
 .reponse {
-  margin-top: 150px;width:520px; text-align: center;
+  margin-top: 150px;
+  width: 520px;
+  text-align: center;
+  font-family: "Cantarell", sans-serif;
 }
 .reponse p {
-  margin-bottom: 15px;text-align: left;
+  margin-bottom: 15px;
+  text-align: left;
 }
 input {
   width: 520px;
   height: 56px;
   border-radius: 38px;
   padding: 30px;
-  border-color:#9e91b7;
+  border-color: #9e91b7;
   background-color: transparent;
   margin-bottom: 50px;
   outline: none;
-  color:#9e91b7
+  color: #9e91b7;
 }
 input::placeholder {
   color: #9e91b7;
 }
-button{width:174px; height:54px; border-radius: 38px;cursor: pointer;}
+button {
+  width: 174px;
+  height: 54px;
+  border-radius: 38px;
+  cursor: pointer;
+  border-color: transparent;
+  text-transform: uppercase;
+  color: #021740;
+  font-weight: bold;
+}
+button:hover {
+  -webkit-filter: drop-shadow(0px 0px 20px #f2cef2);
+}
+
+@media screen and (max-width: 1450px) {
+  .article-haut {
+    background-size: 60%;
+    height: auto;
+    padding: 50px;
+  }
+  .article-content {
+    width: 100%;
+    height: 80vh;
+  }
+  .article-content h1 {
+    font-size: 48px;
+    width: 65%;
+    margin-left: 40%;
+    margin-top: 50px;
+    padding-left: 50px;
+  }
+  .article-content p {
+    width: 65%;
+    text-align: justify;
+    margin-left: 40%;
+    background: url("../Images/Pantherenigme2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+  }
+  .article-content1 {
+    height: 90vh;
+  }
+  .article-content1 h2 {
+    font-family: "Wakanda", sans-serif;
+    color: #9e91b7;
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+
+  .transcription {
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+  }
+  .transcription-left {
+    width: 45%;
+  }
+  .transcription-intro {
+    margin-bottom: 20px;
+    font-family: "Cantarell", sans-serif;
+  }
+  .transcription-code {
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+  .transcription-right {
+    font-family: "Cantarell", sans-serif;
+    color: #fff;
+    width: 55%;
+    padding: 10%;
+    text-align: center;
+    background: url("../Images/Pantherenigme2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+  }
+  .savais-tu {
+    width: 100%;
+    text-align: center;
+    padding: auto;
+    text-align: center;
+  }
+  .savais-tu p {
+    width: 80%;
+    margin: 15px auto;
+  }
+  .code {
+    font-family: "Wakanda", sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  .reponse {
+    margin-top: 150px;
+    width: 520px;
+    text-align: center;
+    font-family: "Cantarell", sans-serif;
+  }
+  .reponse p {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  input {
+    width: 420px;
+    height: 56px;
+    border-radius: 38px;
+    padding: 30px;
+    border-color: #9e91b7;
+    background-color: transparent;
+    margin-bottom: 50px;
+    outline: none;
+    color: #9e91b7;
+  }
+  input::placeholder {
+    color: #9e91b7;
+  }
+  button {
+    width: 174px;
+    height: 54px;
+    border-radius: 38px;
+    cursor: pointer;
+    border-color: transparent;
+    text-transform: uppercase;
+    color: #021740;
+    font-weight: bold;
+  }
+}
+@media screen and (max-width: 940px) {
+  .article-haut {
+    background-size: 60%;
+    height: auto;
+    padding-left: 50px;
+  }
+  .article-content {
+    width: 100%;
+    height: 60vh;
+  }
+  .article-content h1 {
+    font-size: 38px;
+    width: 65%;
+    margin-left: 30%;
+    margin-top: 50px;
+    padding-left: 50px;
+  }
+  .article-content p {
+    width: 90%;
+    text-align: justify;
+    margin-left: 10%;
+    background: url("../Images/Pantherenigme2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+  .article-content1 {
+    height: 90vh;
+  }
+  .article-content1 h2 {
+    font-family: "Wakanda", sans-serif;
+    color: #9e91b7;
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .transcription {
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+  }
+  .transcription-left {
+    width: 45%;
+  }
+  .transcription-code {
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+  .transcription-right {
+    font-family: "Cantarell", sans-serif;
+    color: #fff;
+    width: 65%;
+    padding: auto 5px;
+    text-align: center;
+    background: url("../Images/Pantherenigme2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+  }
+  .savais-tu {
+    width: 100%;
+    text-align: center;
+  }
+  .savais-tu p {
+    width: 100%;
+    margin: auto;
+  }
+
+  .reponse {
+    margin-top: 150px;
+    width: 100%;
+    text-align: center;
+    font-family: "Cantarell", sans-serif;
+  }
+  .reponse p {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  input {
+    width: 380px;
+    height: 56px;
+    border-radius: 38px;
+    padding: 30px;
+    margin-bottom: 50px;
+    outline: none;
+    color: #9e91b7;
+  }
+  input::placeholder {
+    color: #9e91b7;
+  }
+  button {
+    width: 174px;
+    margin: auto;
+    height: 54px;
+    border-radius: 38px;
+    cursor: pointer;
+    border-color: transparent;
+    text-transform: uppercase;
+    color: #021740;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .article-haut {
+    background-size: 60%;
+    background-position: left;
+    height: auto;
+    width:90vh;
+  }
+  .article-content {
+    width: 100%;
+    height: 50vh;
+  }
+  .article-content h1 {
+    font-size: 38px;
+    width: 100%;
+    margin: auto;
+    padding-left: 10px;
+  }
+  .article-content p {
+    width: 100%;
+    text-align: justify;
+    margin: auto;
+    font-size: 14px;
+    background: url("../Images/Pantherenigme2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+  .article-content1 {
+    height: 90vh;
+  }
+  .article-content1 h2 {
+    font-family: "Wakanda", sans-serif;
+    color: #9e91b7;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .transcription {
+    color: #fff;
+    font-size: 16px;
+    display: block;
+  }
+  .transcription-left {
+    width: 100%;
+  }
+  .transcription-code {
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .transcription-right {
+    font-family: "Cantarell", sans-serif;
+    color: #fff;
+    width: 100%;
+    padding: auto 5px;
+    text-align: center;
+    background: url("../Images/Pantherenigme2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    margin-top: 20px;
+  }
+  .savais-tu {
+    width: 100%;
+    text-align: center;
+  }
+  .savais-tu p {
+    width: 100%;
+    margin: auto;
+  }
+
+  .reponse {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    font-family: "Cantarell", sans-serif;
+  }
+  .reponse p {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  input {
+    width: 80%;
+    height: 56px;
+    border-radius: 38px;
+    padding: 30px;
+    margin-bottom: 50px;
+    outline: none;
+    color: #9e91b7;
+  }
+  input::placeholder {
+    color: #9e91b7;
+  }
+  button {
+    width: 174px;
+    margin: auto;
+    height: 54px;
+    border-radius: 38px;
+    cursor: pointer;
+    border-color: transparent;
+    text-transform: uppercase;
+    color: #021740;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .article-haut {
+    background-size: 60%;
+    background-position: left;
+    height: auto;
+  }
+  .article-content {
+    width: 100%;
+    height: 50vh;
+  }
+  .article-content h1 {
+    font-size: 30px;
+    width: 100%;
+    margin: auto;
+    padding-left: 10px;
+  }
+  .article-content p {
+    width: 100%;
+    text-align: justify;
+    margin: auto;
+    font-size: 14px;
+    background: url("../Images/Pantherenigme2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+  .article-content1 {
+    height: 90vh;
+  }
+  .article-content1 h2 {
+    font-family: "Wakanda", sans-serif;
+    color: #9e91b7;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .transcription {
+    color: #fff;
+    font-size: 16px;
+    display: block;
+  }
+  .transcription-left {
+    width: 100%;
+  }
+  .transcription-code {
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .transcription-right {
+    font-family: "Cantarell", sans-serif;
+    color: #fff;
+    width: 100%;
+    padding: auto 5px;
+    text-align: center;
+    background: url("../Images/Pantherenigme2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    margin-top: 20px;
+  }
+  .savais-tu {
+    width: 100%;
+    text-align: center;
+  }
+  .savais-tu p {
+    width: 100%;
+    margin: auto;
+  }
+
+  .reponse {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    font-family: "Cantarell", sans-serif;
+  }
+  .reponse p {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  input {
+    width: 80%;
+    height: 56px;
+    border-radius: 38px;
+    padding: 30px;
+    margin-bottom: 50px;
+    outline: none;
+    color: #9e91b7;
+  }
+  input::placeholder {
+    color: #9e91b7;
+  }
+  button {
+    width: 174px;
+    margin: auto;
+    height: 54px;
+    border-radius: 38px;
+    cursor: pointer;
+    border-color: transparent;
+    text-transform: uppercase;
+    color: #021740;
+    font-weight: bold;
+  }
+}
 
 footer {
-  background: url("./Illustrations + Logo/All pages/back_footer.png");
-  width: 100%;
-  height: auto;
-  padding: 100px;
-  font-family: "Cantarell", sans-serif;
-  color: #fff;
-  position: absolute;
+  background-image: url(../Images/back_footer.png);
+}
+.container {
+  display: grid;
+  grid-template-rows: 300px 200px;
+  grid-template-columns: 40% 30% 30%;
+  gap: 0px;
+  height: 100%;
+  font-family: "Cantarell";
+}
+
+.logo {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  margin: auto;
+  grid-row-end: 3;
+  grid-column-end: 2;
+}
+.footer-logo {
+  text-align: center;
+  justify-self: center;
+  background: url("../Images/footer1.png");
+  padding: 200px;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-}
-.footer-haut {
-  display: flex;
-}
-.footer-left {
-  width: 40%;
-}
-.logo-footer {
-  position: relative;
-  padding-left: 200px;
-}
-
-.footer-deco2 {
-  position: absolute;
-  top: 160px;
-  left: 290px;
-}
-
-.footer-right {
-  width: 60%;
-  display: flex;
 }
 .pages {
-  width: 50%;
+  grid-row-start: 1;
+  grid-column-start: 2;
+  grid-row-end: 2;
+  grid-column-end: 3;
+  text-align: center;
 }
-.reseaux-sociaux {
-  width: 50%;
+.pages-text {
+  margin-top: 15%;
+}
+.container h3 {
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.pages ul li a {
+  color: #fff;
+  padding-bottom: 10px;
+}
+.reseaux {
+  grid-row-start: 1;
+  grid-column-start: 3;
+  grid-row-end: 2;
+  grid-column-end: 4;
+}
+.reseaux-content {
+  margin-top: 15%;
 }
 .logo-reseau a {
-  margin: 10px;
+  margin-right: 10px;
 }
-.reseaux-sociaux p {
-  font-size: 22px;
-  text-transform: uppercase;
-  letter-spacing: 28%;
-  padding: 50px 10px 50px 50px;
-  display: block;
+.lien {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-row-end: 3;
+  grid-column-end: 4;
 }
-.pages p {
-  font-size: 22px;
-  text-transform: uppercase;
-  letter-spacing: 28%;
-  padding: 50px;
-}
-
-.pages a {
+.info {
   color: #fff;
-  margin: 50px;
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-row-end: 3;
+  grid-column-end: 4;
+  text-align: center;
 }
-
-.footer-info a {
+.info-content {
+  margin-top: 50px;
+  display: flex;
+}
+.info-content a {
   color: #fff;
 }
-.point {
-  width: 50px;
+.info-content ul li {
+  display: inline-block;
+  margin: auto 10px auto 20px;
 }
-.footer-bas {
-  position: relative;
-  bottom: 100px;
-  left: 730px;
-  padding: 10px;
-  width: 50%;
+.info-content ul li a {
+  list-style-type: disc;
+  list-style: circle;
+}
+@media screen and (max-width: 1450px) {
+  .container {
+    display: grid;
+    grid-template-rows: 300px 200px;
+    grid-template-columns: 30% 30% 40%;
+    gap: 0px;
+    height: 100%;
+    font-family: "Cantarell";
+  }
+
+  .logo {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    margin: auto;
+    grid-row-end: 3;
+    grid-column-end: 2;
+  }
+
+  .pages-text {
+    margin-top: 20%;
+  }
+  .container h3 {
+    font-size: 18px;
+  }
+  .pages ul li a {
+    color: #fff;
+    padding-bottom: 10px;
+  }
+  .reseaux {
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-row-end: 2;
+    grid-column-end: 4;
+  }
+  .reseaux-content {
+    margin-top: 15%;
+  }
+  .logo-reseau a {
+    margin-right: 10px;
+  }
+  .info-content {
+    display: block;
+  }
+  .info-content a {
+    color: #fff;
+  }
+  .info-content ul li {
+    display: inline-block;
+    margin: auto 10px auto 20px;
+  }
+  .info-content ul li a {
+    list-style-type: disc;
+    list-style: circle;
+  }
+}
+@media screen and (max-width: 940px) {
+  footer {
+    background-image: url(../Images/back_footer.png);
+  }
+  .container {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    gap: 0px;
+    height: 100%;
+    font-family: "Cantarell";
+  }
+
+  .logo {
+    display: none;
+  }
+  .pages {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    width: 100%;
+    padding: 50px;
+    height: 50px;
+  }
+  .pages-text {
+    display: inline;
+  }
+  .container h3 {
+    text-transform: uppercase;
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  .pages ul li a {
+    color: #fff;
+    padding-bottom: 10px;
+  }
+  .reseaux {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    margin: auto;
+  }
+  .reseaux-content {
+    margin-top: 15%;
+  }
+  .logo-reseau a {
+    margin-right: 10px;
+  }
+  .info {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+  }
+  .info-content ul li {
+    display: inline-block;
+    margin: auto 10px auto 20px;
+  }
+  .info-content ul li a {
+    list-style-type: none;
+    list-style: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  footer {
+    background-image: url(../Images/back_footer.png);
+    width: 90vh;
+  }
+  .container {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    gap: 0px;
+    height: 100%;
+    font-family: "Cantarell";
+  }
+
+  .logo {
+    display: none;
+  }
+  .pages {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    width: 50vh;
+    padding: 50px;
+    height: 50px;
+  }
+  .pages-text {
+    display: inline;
+  }
+  .container h3 {
+    text-transform: uppercase;
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  .pages ul li a {
+    color: #fff;
+    padding-bottom: 10px;
+  }
+  .reseaux {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    margin: auto;
+    width: 50vh;
+  }
+  .reseaux-content {
+    margin-top: 15%;
+  }
+  .logo-reseau a {
+    margin-right: 10px;
+  }
+  .info {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+  }
+  .info-content ul li {
+    display: inline-block;
+    margin: auto 10px auto 20px;
+  }
+  .info-content ul li a {
+    list-style-type: none;
+    list-style: none;
+  }
 }
